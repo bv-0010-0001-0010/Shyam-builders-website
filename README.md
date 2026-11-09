@@ -29,6 +29,16 @@ Upload `index.html`, `css/`, `js/` and `assets/` into the domain's `public_html`
 
 The enquiry form opens a prefilled email draft addressed to `admin@shyambuilders.com.au`. It does not store form submissions or require a backend.
 
+## Brand files and letterhead
+
+Three standalone vector logo lockups are in `assets/logos/`:
+
+- `shyam-builders-logo-primary.svg` — full-color logo for light backgrounds
+- `shyam-builders-logo-reversed.svg` — white and copper logo for dark backgrounds
+- `shyam-builders-logo-monochrome.svg` — one-color version for simple printing
+
+Open `letterhead.html` in a browser to edit the placeholder letter text. Use **Print / Save as PDF** to produce an A4 letterhead document.
+
 ## Before launch
 
 - Replace the inspiration photography with Shyam Builders' own project photography when available.

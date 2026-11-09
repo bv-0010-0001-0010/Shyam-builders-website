@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#183c35">
+    <title>Shyam Builders | Letterhead</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <style>
+      :root { --forest: #183c35; --copper: #bd6b4d; --clay: #e09a78; --paper: #fffefa; --muted: #6e7772; --line: #dce1dc; --sans: "DM Sans", Arial, sans-serif; --serif: "DM Serif Display", Georgia, serif; }
+      * { box-sizing: border-box; }
+      body { margin: 0; padding: 28px 16px; color: #1c2724; background: #e8ebe7; font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+      .toolbar { width: min(210mm, 100%); display: flex; justify-content: flex-end; margin: 0 auto 14px; }
+      .print-button { min-height: 42px; padding: 0 18px; border: 0; color: white; background: var(--forest); cursor: pointer; font: 600 12px var(--sans); }
+      .print-button:hover { background: var(--copper); }
+      .sheet { position: relative; display: flex; width: 210mm; min-height: 297mm; flex-direction: column; margin: 0 auto; padding: 20mm 21mm 16mm; background: var(--paper); box-shadow: 0 14px 50px rgba(18, 39, 32, .13); }
+      .letterhead { display: flex; align-items: center; justify-content: space-between; gap: 12mm; padding-bottom: 10mm; border-bottom: 1.5px solid var(--copper); }
+      .logo { display: block; width: 84mm; max-width: 62%; height: auto; }
+      .company-details { color: var(--forest); font-size: 9pt; line-height: 1.65; text-align: right; }
+      .company-details p { margin: 0; }
+      .company-details strong { font-weight: 700; }
+      .company-details a { color: inherit; text-decoration: none; }
+      .letter-content { flex: 1; padding-top: 15mm; font-size: 11pt; line-height: 1.65; }
+      .date { margin: 0 0 10mm; color: var(--muted); font-size: 10pt; }
+      .recipient { min-height: 23mm; margin-bottom: 8mm; white-space: pre-line; }
+      .subject { margin: 0 0 8mm; color: var(--forest); font-size: 12pt; font-weight: 700; }
+      .body-copy p { margin: 0 0 5mm; }
+      .signoff { margin-top: 10mm; }
+      .signature-space { height: 17mm; }
+      .signature-name { margin: 0; color: var(--forest); font-weight: 700; }
+      .signature-company { margin: 0; color: var(--muted); font-size: 9.5pt; }
+      [contenteditable="true"] { outline: none; }
+      [contenteditable="true"]:focus { outline: 1px dashed rgba(189, 107, 77, .6); outline-offset: 3px; }
+      .footer { display: flex; align-items: end; justify-content: space-between; gap: 12mm; padding-top: 6mm; border-top: 1px solid var(--line); color: var(--muted); font-size: 8.5pt; line-height: 1.55; }
+      .footer p { margin: 0; }
+      .footer strong { color: var(--forest); font-weight: 600; }
+      .footer-mark { color: var(--copper); font-family: var(--serif); font-size: 18pt; }
+      @page { size: A4; margin: 0; }
+      @media print {
+        body { padding: 0; background: white; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+        .toolbar { display: none; }
+        .sheet { width: 210mm; min-height: 297mm; margin: 0; padding: 20mm 21mm 16mm; box-shadow: none; }
+        [contenteditable="true"]:focus { outline: none; }
+      }
+      @media screen and (max-width: 700px) {
+        body { padding: 12px 8px; }
+        .sheet { width: 100%; min-height: 297mm; padding: 34px 26px; }
+        .letterhead { align-items: flex-start; flex-direction: column; gap: 18px; padding-bottom: 24px; }
+        .logo { width: min(84mm, 100%); max-width: 100%; }
+        .company-details { text-align: left; }
+        .letter-content { padding-top: 30px; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar"><button class="print-button" type="button" onclick="window.print()">Print / Save as PDF</button></div>
+    <main class="sheet" aria-label="Shyam Builders business letterhead">
+      <header class="letterhead">
+        <img class="logo" src="assets/logos/shyam-builders-logo-primary.svg" alt="Shyam Builders Pty Ltd">
+        <div class="company-details">
+          <p><strong>SHYAM BUILDERS PTY LTD</strong></p>
+          <p>ABN 43 676 421 266 &nbsp;·&nbsp; ACN 676 421 266</p>
+          <p>30 Blackett Street, Kings Park NSW 2148</p>
+          <p><a href="mailto:admin@shyambuilders.com.au">admin@shyambuilders.com.au</a></p>
+        </div>
+      </header>
+      <section class="letter-content" aria-label="Letter content">
+        <p class="date" contenteditable="true">9 November 2026</p>
+        <div class="recipient" contenteditable="true">[Recipient name]
+[Company]
+[Address]</div>
+        <p class="subject" contenteditable="true">[Subject]</p>
+        <div class="body-copy" contenteditable="true">
+          <p>Dear [Recipient name],</p>
+          <p>[Write your letter here.]</p>
+          <p>Kind regards,</p>
+        </div>
+        <div class="signoff">
+          <div class="signature-space"></div>
+          <p class="signature-name" contenteditable="true">[Your name]</p>
+          <p class="signature-company">Shyam Builders Pty Ltd</p>
+        </div>
+      </section>
+      <footer class="footer">
+        <p><strong>Shyam Builders Pty Ltd</strong><br>30 Blackett Street, Kings Park NSW 2148<br>admin@shyambuilders.com.au<br>ABN 43 676 421 266 &nbsp;·&nbsp; ACN 676 421 266</p>
+        <span class="footer-mark" aria-hidden="true">SB</span>
+      </footer>
+    </main>
+  </body>
+</html>
