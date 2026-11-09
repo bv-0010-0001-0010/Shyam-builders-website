@@ -31,14 +31,16 @@ document.querySelector('#enquiry-form')?.addEventListener('submit', (event) => {
   if (!(form instanceof HTMLFormElement) || !form.reportValidity()) return;
 
   const formData = new FormData(form);
+  const subject = 'Building project enquiry';
   const message = [
-    'Hello Shyam Builders, I would like to discuss a project.',
+    'Hello Shyam Builders,',
     '',
+    'I would like to discuss a project.',
     `Name: ${formData.get('name')}`,
     `Project type: ${formData.get('project-type')}`,
     `Project details: ${formData.get('message')}`
   ].join('\n');
-  window.open(`https://wa.me/61434084368?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
+  window.location.href = `mailto:admin@shyambuilders.com.au?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
 });
 
 document.querySelector('#year').textContent = String(new Date().getFullYear());

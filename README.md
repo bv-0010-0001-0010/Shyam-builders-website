@@ -27,7 +27,7 @@ Upload `index.html`, `css/`, `js/` and `assets/` into the domain's `public_html`
 
 ## Contact form
 
-The enquiry form opens a prefilled WhatsApp message addressed to `+61 434 084 368`. It does not store form submissions or require a backend.
+The enquiry form opens a prefilled email draft addressed to `admin@shyambuilders.com.au`. It does not store form submissions or require a backend.
 
 ## Before launch
 
